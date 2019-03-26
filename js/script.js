@@ -12,7 +12,10 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        asNavFor: '.slider-nav'
+        asNavFor: '.slider-nav',
+        autoplay: true,
+        autoplaySpeed: 2000,
+        cssEase: 'linear'
     });
     $('.slider-nav').slick({
         slidesToShow: 3,
@@ -21,6 +24,9 @@ $(document).ready(function () {
         centerMode: true,
         focusOnSelect: true,
         asNavFor: '.slider-for',
+        cssEase: 'linear',
+        prevArrow: '<div class="prev"><</div>',
+        nextArrow: '<div class="next">></div>'
     });
 });
 
@@ -77,6 +83,7 @@ $(".load-foto").click((e) => {
     setTimeout(() => {
         $(".spinner").css("display", "none");
     }, 2000);
+    retern;
 });
 
 
@@ -90,4 +97,11 @@ $(".amazing-list").click((e) => {
     } else {
         $(".filter-foto").css("display", "block");
     }
+});
+
+
+$(".load-masonry").click((e) => {
+     setTimeout(() => {
+         $(".more-masonry").css("display", "block");
+     }, 1000);
 });
